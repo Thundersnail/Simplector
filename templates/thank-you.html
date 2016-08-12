@@ -1,0 +1,28 @@
+<html>
+<head>
+    <title>
+        Thank you for your vote!
+    </title>
+
+    <META http-equiv="refresh" content="{{ delay }};URL={{ redirect_loc }}">
+
+</head>
+
+<body>
+    <h1>Thank you for your vote!</h1>
+
+    <p>
+        After {{ delay }} seconds, this web-page will automatically redirect to the next voter's page.<br/>
+        No further action on your part is required.
+    </p>
+
+    <p>
+        Have a nice day.
+    </p>
+
+    <hr/>
+    <em>If the page does not redirect automatically, please click on
+        <a href="{{ redirect_loc }}">this link</a> to continue.</em>
+
+</body>
+</html>

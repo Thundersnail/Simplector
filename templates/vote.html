@@ -1,0 +1,44 @@
+<html>
+<head>
+    <title>
+        Vote
+    </title>
+</head>
+
+<body>
+    <center>
+        <div>
+            <h1>Please click on the name or the face of the candidate you wish to vote for:</h1>
+        </div>
+
+        <div>
+            <table border="5px">
+                <!-- Names: -->
+                <tr>
+                    {% for candidate in candidates %}
+                        <td>
+                            <a href="{{ candidate.vote_link }}">
+                                <center>{{ candidate.name }}</center>
+                            </a>
+                        </td>
+                    {% endfor %}
+                </tr>
+
+                <!-- Images: -->
+                <tr>
+                    {% for candidate in candidates %}
+                        <td>
+                            <a href="{{ candidate.vote_link }}">
+                                <img src="{{ candidate.img_src }}"
+                                     width="{{ portrait_width }}"
+                                     height="{{ portrait_height }}"/>
+                            </a>
+                        </td>
+                    {% endfor %}
+                </tr>
+            </table>
+        </div>
+    </center>
+
+</body>
+</html>

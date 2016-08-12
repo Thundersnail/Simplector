@@ -1,0 +1,22 @@
+<html>
+
+<head>
+    End of Election | Results
+</head>
+
+<body>
+    <h1>Results:</h1>
+
+    {% for candidate in candidates %}
+        <p>
+            <b>{{ candidate.name }}</b> got <b>{{ candidate.num_votes }}</b> votes.
+        </p>
+    {% endfor %}
+
+    <hr/>
+    <h2>The verdict is:</h2>
+    {{ verdict }}
+
+</body>
+
+</html>
